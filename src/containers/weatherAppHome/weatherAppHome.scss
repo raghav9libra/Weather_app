@@ -1,8 +1,14 @@
+body {
+	background-color: rgb(167, 167, 236);
+}
 .app-container {
 	width: 40%;
 	margin: 0 auto;
 	margin-top: 5%;
-	background-color: rgb(246, 157, 172);
+	background-color: rgb(157, 236, 246);
+	// border: 2px solid rgb(238, 41, 23);
+	border-radius: 12px;
+	box-shadow: 0 4px 12px;
 	form {
 		margin: 0 auto;
 

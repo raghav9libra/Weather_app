@@ -12,13 +12,14 @@ export default class WeatherAppHome extends Component {
 				temperature: "",
 				feels_like: "",
 			},
-			errorMsg: "",
+			errorMsg: "Enter City to get Weather Deatils",
 		};
 	}
 
 	handleChange = (e) => {
 		this.setState({ query: e.target.value });
 	};
+
 	handleSubmit = (e) => {
 		e.preventDefault();
 
@@ -36,7 +37,7 @@ export default class WeatherAppHome extends Component {
 								temperature: temp,
 								feels_like: feels_like,
 							};
-							this.setState({ apiData: obj, query: "" });
+							this.setState({ apiData: obj, query: "", errorMsg: "" });
 						});
 					} else {
 						this.setState({ errorMsg: "Data Not Found !" });
@@ -59,7 +60,10 @@ export default class WeatherAppHome extends Component {
 						placeholder="Enter City"
 					/>
 				</form>
-				<WeatherDetails apiData={this.state.apiData} />
+				<WeatherDetails
+					apiData={this.state.apiData}
+					errorMsg={this.state.errorMsg}
+				/>
 			</div>
 		);
 	}
