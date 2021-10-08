@@ -1,0 +1,24 @@
+.app-container {
+	width: 40%;
+	margin: 0 auto;
+	margin-top: 5%;
+	background-color: rgb(246, 157, 172);
+	form {
+		margin: 0 auto;
+
+		width: 60%;
+		input {
+			border: 2px solid grey;
+			border-radius: 12px;
+			font-size: 1.5rem;
+			background: inherit;
+			margin-top: 5%;
+			// width: 100%;
+			padding: 0.25em 0.5em;
+			&:focus-visible {
+				outline: none;
+				border: 2px solid grey;
+			}
+		}
+	}
+}
